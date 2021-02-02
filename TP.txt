@@ -1,0 +1,26 @@
+** TP: Créer une application démo front/back implémentant des modèles de conception **
+
+=== Front: Ts ou Js ===
+Modèle à utiliser: Decorator
+
+Afficher un formulaire de login/logout
+
+Utilisation de ce modèle pour produire un message de retour en fonction de l'issue de la requête de login/logout.
+Une classe de décoration modifie l'apparence/le contenu de ce retour.
+
+
+=== Back: techno au choix ===
+Modèle à utiliser: Observer
+
+Utilisation de ce modèle pour détecter les événements login/logout
+- Actions à réaliser en cas de tentative de login:
+	- envoie d'une réponse adaptée au client
+	- écriture en db ou dans un fichier de log des infos suivantes:
+		IP du client, date de la requête, Nom de l'utilisateur/(mot de passe saisis si erreur), statut (success/failure)
+	- création d'une session en cas de login réussi
+	- bannissement de l'IP client en cas de nombre d'échecs supérieur à 3
+
+- Actions à réaliser en cas de logout
+	- envoie d'une réponse adaptée au client
+	- écriture en db ou sur dans un fichier de log des infos suivantes:
+		Nom de de l'utilisateur, datetime de déconnexion, durée de sa session (exemple: 3min20sec)

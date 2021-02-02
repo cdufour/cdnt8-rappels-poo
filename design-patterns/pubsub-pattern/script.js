@@ -1,5 +1,5 @@
 /*
-    Design Pattern: PubSub
+* Design Pattern: PubSub
 */
 
 const btn = document.getElementById('btn');
